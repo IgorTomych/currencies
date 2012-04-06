@@ -20,7 +20,6 @@ from google.appengine.api import urlfetch
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.out.write('Hello world!')
         url = "http://bank.gov.ua/control/uk/curmetal/detail/currency?period=daily"
         result = urlfetch.fetch(url)
         if result.status_code == 200:
